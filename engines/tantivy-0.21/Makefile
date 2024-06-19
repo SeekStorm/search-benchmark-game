@@ -10,10 +10,10 @@ serve: target/release/do_query
 	@target/release/do_query idx
 
 target/release/%:
-	@echo "\n\n\n--- Building tantivy's binary ---"
+	@echo "\n\n\n--- Building tantivy's binary ---" >&2
 	@RUSTFLAGS='-C target-cpu=native' cargo build --release --bin $(notdir $@)
 
 idx: target/release/build_index
-	@echo "\n\n\n---- Indexing tantivy ----"
+	@echo "\n\n\n---- Indexing tantivy ----" >&2
 	@mkdir -p idx
-	export RUST_LOG=info && target/release/build_index "$@" < ${CORPUS}
+	export RUST_LOG=info && target/release/build_index "$@" < ${CORPUS} >&2

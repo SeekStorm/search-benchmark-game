@@ -9,6 +9,7 @@ use tantivy::{DocId, Index, Score, SegmentReader, TERMINATED};
 use std::collections::BinaryHeap;
 use std::env;
 use std::io::BufRead;
+use std::io::Write;
 use std::path::Path;
 
 fn main() {
@@ -149,6 +150,8 @@ fn main_inner(index_dir: &Path) -> tantivy::Result<()> {
     let searcher = reader.searcher();
 
     let stdin = std::io::stdin();
+    let mut stdout = std::io::stdout();
+
     for line_res in stdin.lock().lines() {
         let line = line_res?;
         let fields: Vec<&str> = line.split("\t").collect();
@@ -218,6 +221,8 @@ fn main_inner(index_dir: &Path) -> tantivy::Result<()> {
             }
         }
         println!("{}", count);
+        // https://github.com/Tony-X/search-benchmark-game/issues/29
+        stdout.flush()?;
     }
 
     Ok(())

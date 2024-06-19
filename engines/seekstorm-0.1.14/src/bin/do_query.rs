@@ -181,7 +181,6 @@ async fn main() -> Result<(), Box<dyn Error + Send + Sync>> {
             }
         };
         //println!("{}", count);
-        //if writeln!(handle, "{}", count).is_err() { /*return Ok(());*/ };
         writeln!(handle, "{}", count);
         stdout.flush()?;
     }
