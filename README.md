@@ -1,8 +1,10 @@
 
 # Welcome to Search Benchmark, the Game!
 
+Credits: This repository has been forked from [Tantivy's search-benchmark-game](https://github.com/quickwit-oss/search-benchmark-game/), originally developed by Jason Wolfe.
+
 This repository is standardized benchmark for comparing the speed of various
-aspects of search engine technologies.
+aspects of search engine technologies. 
 
 The results are available [here](https://tantivy-search.github.io/bench/).
 
@@ -10,17 +12,6 @@ This benchmark is both
 - **for users** to make it easy for users to compare different libraries
 - **for library** developers to identify optimization opportunities by comparing
 their implementation to other implementations.
-
-Currently, the benchmark only includes Lucene and tantivy.
-It is reasonably simple to add another engine.
-
-You are free to communicate about the results of this benchmark **in
-a reasonable manner**.
-For instance, twisting this benchmark in marketing material to claim that your search engine is 31x faster than Lucene,
-because your product was 31x on one of the test is not tolerated. If this happens, the benchmark will publicly
-host a wall of shame.
-Bullshit claims about performance are a plague in the database world.
-
 
 ## The benchmark
 
@@ -55,14 +46,18 @@ Out of 10 runs, we only retain the best score, so Garbage Collection likely does
 
 The results file that is included in this repository was generated using the following benchmark
 environment:
- - AWS c7i.2xlarge instance running on us-east-1
- - Processor Intel(R) Xeon(R) Platinum 8488C
- - Amazon Linux 2023
- - Kernel `6.1.72-96.166.amzn2023.x86_64`
- - Rust 1.75
- - Adoptium JDK `OpenJDK21U-jdk_x64_linux_hotspot_21.0.2_13`
+ - ThinkPad P1 Gen 6
+ - Processor Intel(R) Core(TM) i7-13700H
+ - SK hynix 2TB SSD PCIe 4.0 NVMe M.2
+ - Ubuntu 24.04 LTS
+ - Rust 1.79
+ - OpenJDK 17
 
 ## Engine specific detail
+
+### SeekStorm
+
+- Query cache is disabled.
 
 ### Lucene
 
@@ -90,7 +85,7 @@ The tantivy benchmarks and benchmark driver code requires Cargo. This can be ins
 Clone this repo.
 
 ```
-git clone git@github.com:tantivy-search/search-benchmark-game.git
+git clone git@github.com:seekstorm/search-benchmark-game.git
 ```
 
 ## Running
