@@ -1,12 +1,12 @@
 
 # Welcome to Search Benchmark, the Game!
 
-Credits: This repository has been forked from [Tantivy's search-benchmark-game](https://github.com/quickwit-oss/search-benchmark-game/), originally developed by Jason Wolfe.
+Credits: This repository has been forked from Tantivy's [search-benchmark-game](https://github.com/quickwit-oss/search-benchmark-game/), originally developed by Jason Wolfe.
 
 This repository is standardized benchmark for comparing the speed of various
 aspects of search engine technologies. 
 
-The results are available [here](https://tantivy-search.github.io/bench/).
+The results are available [here](https://seekstorm.github.io/bench/).
 
 This benchmark is both
 - **for users** to make it easy for users to compare different libraries
