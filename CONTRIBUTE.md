@@ -1,6 +1,6 @@
 # Adding another engine
 
-Currently only tantivy and lucene are supported, but you can add another search
+Currently only seekstorm, tantivy and lucene are supported, but you can add another search
 engine by creating a directory in the engines directory and add a `Makefile`
 implementing the following commands :
 

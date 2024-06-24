@@ -4,10 +4,10 @@ export
 WIKI_SRC = "https://www.dropbox.com/s/wwnfnu441w1ec9p/wiki-articles.json.bz2"
 
 # COMMANDS ?=  TOP_100 TOP_100_COUNT COUNT
-COMMANDS ?=  TOP_10 TOP_10_COUNT COUNT
+COMMANDS ?= TOP_10_COUNT TOP_10 COUNT
 
 # ENGINES ?= pisa-0.8.2 rucene-0.1 bleve-0.8.0-scorch bluge-0.2.2
-ENGINES ?= seekstorm-0.1.14 tantivy-0.21 lucene-9.9.2
+ENGINES ?= seekstorm-0.1.15 tantivy-0.22 lucene-9.9.2
 PORT ?= 8080
 
 help:

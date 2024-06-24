@@ -1,12 +1,12 @@
 
 # Welcome to Search Benchmark, the Game!
 
-Credits: This repository has been forked from Tantivy's [search-benchmark-game](https://github.com/quickwit-oss/search-benchmark-game/), originally developed by Jason Wolfe.
+Credits: This repository has been forked from Tantivy's [search-benchmark-game](https://github.com/quickwit-oss/search-benchmark-game/), originally developed by [Jason Wolfe](https://github.com/jason-wolfe/search-index-benchmark-game).
 
 This repository is standardized benchmark for comparing the speed of various
 aspects of search engine technologies. 
 
-The results are available [here](https://seekstorm.github.io/bench/).
+The results are available [here](https://seekstorm.github.io/search-benchmark-game/).
 
 This benchmark is both
 - **for users** to make it easy for users to compare different libraries
@@ -55,21 +55,23 @@ environment:
 
 ## Engine specific detail
 
-### SeekStorm
-
-- Query cache is disabled.
-
 ### Lucene
 
+- [Lucene](https://github.com/apache/lucene) license: Apache-2.0 language: Java
 - Query cache is disabled.
 - GC should not influence the results as we pick the best out of 5 runs.
 - The `-bp` variant implements document reordering via the bipartite graph partitioning algorithm, also called recursive graph bisection.
 
 ### Tantivy
 
+- [Tantivy](https://github.com/quickwit-oss/tantivy) license: MIT language: Rust
 - Tantivy returns slightly more results because its tokenizer handles apostrophes differently.
 - Tantivy and Lucene both use BM25 and should return almost identical scores.
 
+### SeekStorm
+
+- [SeekStorm](https://github.com/SeekStorm/SeekStorm) license: Apache-2.0 language: Rust
+- Query cache is disabled.
 
 # Reproducing
 

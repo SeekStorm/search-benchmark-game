@@ -48,7 +48,7 @@ class Benchmark extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      mode: "TOP_10",
+      mode: "TOP_10_COUNT",
       tag: null
     };
   }
