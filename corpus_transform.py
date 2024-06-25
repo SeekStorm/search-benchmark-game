@@ -19,6 +19,7 @@ for line in fileinput.input():
 
     doc_transformed = {
         "id": doc["url"],
+        "title": transform(doc["title"]),
         "text": transform(doc["body"])
     }
 

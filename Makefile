@@ -7,7 +7,12 @@ WIKI_SRC = "https://www.dropbox.com/s/wwnfnu441w1ec9p/wiki-articles.json.bz2"
 COMMANDS ?= TOP_10_COUNT TOP_10 COUNT
 
 # ENGINES ?= pisa-0.8.2 rucene-0.1 bleve-0.8.0-scorch bluge-0.2.2
-ENGINES ?= seekstorm-0.1.15 tantivy-0.22 lucene-9.9.2
+
+# single field search
+# ENGINES ?= seekstorm-0.1.15-singlefield tantivy-0.22-singlefield lucene-9.9.2-singlefield 
+
+# multi field search
+ENGINES ?= seekstorm-0.1.15-multifield tantivy-0.22-multifield lucene-9.9.2-multifield
 PORT ?= 8080
 
 help:
