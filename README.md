@@ -9,7 +9,7 @@ aspects of search engine technologies.
 The results are available [here](https://seekstorm.github.io/search-benchmark-game/).
 
 This benchmark is both
-- **for users** to make it easy for users to compare different libraries
+- **for users** to make it easy for users to compare different libraries.
 - **for library** developers to identify optimization opportunities by comparing
 their implementation to other implementations.
 
